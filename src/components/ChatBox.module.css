@@ -1,0 +1,54 @@
+.chatContainer {
+  background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border-radius: 16px;
+  display: flex; flex-direction: column; height: 300px; width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  border: 1px solid rgba(226,232,240,0.8); overflow: hidden;
+}
+
+:global(.dark) .chatContainer {
+  background: rgba(30,41,59,0.7); border-color: rgba(51,65,85,0.8);
+}
+
+.messagesWindow {
+  flex: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem;
+}
+
+.messagesWindow::-webkit-scrollbar { width: 4px; }
+.messagesWindow::-webkit-scrollbar-thumb { background-color: rgba(148, 163, 184, 0.3); border-radius: 10px; }
+
+.empty { text-align: center; color: #94a3b8; font-size: 0.9rem; margin-top: auto; margin-bottom: auto; }
+
+.message { display: flex; flex-direction: column; max-width: 80%; }
+.myMsg { align-self: flex-end; align-items: flex-end; }
+.theirMsg { align-self: flex-start; align-items: flex-start; }
+.sysMsg { align-self: center; align-items: center; max-width: 100%; }
+
+.author { font-size: 0.75rem; color: #64748b; margin-bottom: 0.25rem; font-weight: 600; }
+:global(.dark) .author { color: #94a3b8; }
+
+.bubble {
+  padding: 0.6rem 1rem; border-radius: 14px; font-size: 0.95rem; line-height: 1.4; word-wrap: break-word;
+}
+
+.myMsg .bubble { background: #3b82f6; color: white; border-bottom-right-radius: 4px; }
+.theirMsg .bubble { background: #f1f5f9; color: #334155; border-bottom-left-radius: 4px; }
+:global(.dark) .theirMsg .bubble { background: #334155; color: #f8fafc; }
+
+.sysMsg .bubble { background: rgba(234, 179, 8, 0.1); color: #ca8a04; font-size: 0.8rem; border-radius: 20px; padding: 0.4rem 0.8rem; }
+:global(.dark) .sysMsg .bubble { color: #fef08a; background: rgba(234, 179, 8, 0.2); }
+
+.inputArea { display: flex; padding: 0.75rem; background: rgba(255,255,255,0.5); gap: 0.5rem; border-top: 1px solid rgba(226,232,240,0.5); }
+:global(.dark) .inputArea { background: rgba(15,23,42,0.5); border-top-color: rgba(51,65,85,0.5); }
+
+.inputArea input {
+  flex: 1; background: #f8fafc; border: 1px solid transparent; border-radius: 20px; padding: 0.5rem 1rem;
+  font-size: 0.95rem; outline: none; transition: border-color 0.2s;
+}
+:global(.dark) .inputArea input { background: #1e293b; color: #f8fafc; }
+.inputArea input:focus { border-color: #3b82f6; }
+
+.inputArea button {
+  width: 36px; height: 36px; border-radius: 50%; border: none; background: #3b82f6; color: white;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.inputArea button:disabled { background: #cbd5e1; cursor: not-allowed; }
+:global(.dark) .inputArea button:disabled { background: #475569; }

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #293340;
+  background: #f1f2f5;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f1f2f5;
+  color: #293340;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+button, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+button:focus-visible { outline: 3px solid rgba(229, 37, 41, 0.3); outline-offset: 3px; }

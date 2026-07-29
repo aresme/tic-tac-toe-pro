@@ -1,0 +1,27 @@
+.controls {
+  width: 100%; display: flex; flex-direction: column; gap: 12px;
+}
+
+.primaryButton {
+  min-height: 59px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  border-radius: 15px; border: none; background: #e52529; color: white;
+  font-size: 1rem; font-weight: 800; cursor: pointer;
+  box-shadow: 0 10px 24px rgba(229, 37, 41, 0.24); transition: 160ms ease;
+}
+
+.primaryButton:hover { background: #cc1f23; transform: translateY(-2px); }
+
+.secondaryGroup { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.secondaryButton, .dangerButton {
+  min-height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  border: 1px solid #dce1e8; border-radius: 15px; background: white; color: #59636f;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: 160ms ease;
+}
+
+.secondaryButton:hover:not(:disabled) { background: #f7f8fa; transform: translateY(-1px); }
+.dangerButton { color: #e52529; }
+.dangerButton:hover { background: #fff3f3; transform: translateY(-1px); }
+
+.secondaryButton:disabled { opacity: 0.5; cursor: not-allowed; }
+.primaryButton:active, .secondaryButton:active, .dangerButton:active { transform: scale(0.98); }

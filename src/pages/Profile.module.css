@@ -1,0 +1,57 @@
+.container {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; width: 100%; min-height: 80vh;
+}
+
+.backBtn {
+  align-self: flex-start;
+  display: flex; align-items: center; gap: 0.3rem;
+  background: transparent; border: none; padding: 0; margin-bottom: 2rem;
+  color: #707a87; font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; transition: color 0.15s;
+}
+.backBtn:hover { color: #e52529; }
+
+.card {
+  width: 100%; max-width: 500px; padding: 30px;
+  background: rgba(255, 255, 255, 0.92); border: 1px solid #dce1e8; border-radius: 25px;
+  box-shadow: 0 16px 45px rgba(35, 45, 60, 0.10); text-align: center;
+}
+
+.header { margin-bottom: 2rem; }
+.iconWrapper {
+  width: 76px; height: 76px; display: grid; place-items: center;
+  border-radius: 24px; color: #e52529; background: #fff3f3;
+  border: 1px solid rgba(229, 37, 41, 0.20); margin: 0 auto 1.25rem;
+}
+
+.header h1 { margin: 0; font-size: 1.8rem; color: #293340; }
+.subtitle { margin: 0.5rem 0 0; color: #707a87; font-size: 0.95rem; }
+
+.inputGroup { display: flex; flex-direction: column; gap: 0.5rem; text-align: left; }
+.label { display: block; font-size: 0.875rem; font-weight: 700; color: #394451; margin-left: 0.5rem; }
+.input {
+  width: 100%; min-height: 56px; padding: 0 1.25rem; font-size: 1.1rem; color: #59636f;
+  border: 1px solid #dce1e8; border-radius: 15px; background: #fafbfc;
+  transition: 160ms ease; font-weight: 700; outline: none; box-sizing: border-box;
+}
+.input:focus {
+  background: white; border-color: rgba(229, 37, 41, 0.55);
+  box-shadow: 0 7px 20px rgba(229, 37, 41, 0.10);
+}
+
+.divider {
+  height: 1px; background: #dce1e8; margin: 2rem 0; width: 100%;
+}
+
+.statsGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+
+.statBox {
+  background: #fafbfc; padding: 1rem; border-radius: 16px; border: 1px solid #dce1e8;
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+}
+
+.statIcon { color: #59636f; }
+.statLabel { font-size: 0.8rem; color: #707a87; font-weight: 700; }
+.statValue { font-size: 1.35rem; font-weight: 800; color: #293340; }
