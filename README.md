@@ -1,32 +1,42 @@
-# React + TypeScript + Vite
+# ❌⭕ Tic-Tac-Toe Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A masterfully crafted, professional-grade Tic-Tac-Toe Progressive Web App (PWA) built with React, Vite, and Firebase. This isn't your standard tutorial app—it features an unbeatable Minimax computational AI, a pristine flat-design UI architecture, and completely serverless, authentication-free global multiplayer.
 
-Currently, two official plugins are available:
+## ✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Extreme Computational AI**: An uncompromised, mathematically invincible opponent. The AI utilizes a fully computed Minimax optimization algorithm with randomized non-deterministic tie-breaking to ensure it behaves ruthlessly and unpredictably. 
+- **Serverless Realtime Multiplayer**: Bypass the hassle of creating accounts. Using Firebase Realtime Database transactions and anonymous presence systems, players can immediately generate room codes and play with friends globally with zero friction.
+- **Pristine Minimalist UI**: A disciplined, high-contrast Red, White, and Slate Gray aesthetic. Drops shadows and gradients were strictly removed in favor of a crisp, native-feeling flat design system.
+- **Offline-Ready PWA**: Fully installable on iOS, Android, and Desktop operating systems. Uses aggressive local caching and `localStorage` to preserve offline match history and cumulative win/loss statistics flawlessly.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Core**: React 18, TypeScript, Vite
+- **Styling**: Pure Modular CSS (Zero-dependency custom design system)
+- **Multiplayer / Infrastructure**: Firebase Realtime Database & Firebase Hosting
+- **State Management**: React Hooks + Local Storage Synchronizers
 
-## Expanding the Oxlint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Play the live production version here:
+**[https://tic-tier.web.app](https://tic-tier.web.app/)**
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## 💻 Local Execution
+
+Clone the repository and run it locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/aresme/tic-tac-toe-pro.git
+
+# 2. Navigate and install dependencies
+cd tic-tac-toe-pro
+npm install
+
+# 3. Start the dev server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🧠 Engine Architecture
+
+The "Extreme" difficulty analyzes the entire game state tree utilizing the **Minimax Algorithm**. The engine evaluates every possible board permutation down to the deepest terminal states seamlessly. Because Tic-Tac-Toe is a mathematically solved zero-sum game, the AI algorithm is mathematically verified to never lose a match—the best a human can definitively achieve against it is a perfect draw.
